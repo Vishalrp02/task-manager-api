@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: task-manager
+    env: node
+    plan: free
+    branch: main
+    buildCommand: "npm install"
+    startCommand: "npm run start"
+    envVars:
+      - key: MONGODB_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
